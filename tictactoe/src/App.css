@@ -1,0 +1,52 @@
+.app {
+  min-height: 100vh;
+  background: #f87171;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 320px;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
