@@ -12,12 +12,11 @@ function App() {
       const copy = board.map(row => [...row]);
       copy[r][c] = value;
       setBoard(copy);
-      setMessage(""); // Clear message when user makes changes
+      setMessage("");
     }
   };
 
   const validateSudoku = () => {
-    // Check rows
     for (let r = 0; r < 9; r++) {
       const seen = new Set();
       for (let c = 0; c < 9; c++) {
@@ -31,7 +30,6 @@ function App() {
       }
     }
 
-    // Check columns
     for (let c = 0; c < 9; c++) {
       const seen = new Set();
       for (let r = 0; r < 9; r++) {
@@ -45,7 +43,6 @@ function App() {
       }
     }
 
-    // Check 3x3 subgrids
     for (let gridR = 0; gridR < 3; gridR++) {
       for (let gridC = 0; gridC < 3; gridC++) {
         const seen = new Set();
@@ -63,7 +60,6 @@ function App() {
       }
     }
 
-    // Check if board is complete
     for (let r = 0; r < 9; r++) {
       for (let c = 0; c < 9; c++) {
         if (board[r][c] === "") {
@@ -100,7 +96,7 @@ function App() {
         )}
       </div>
 
-      <div className="button-container">
+      <div>
         <button onClick={validateSudoku}>Validate</button>
         <button onClick={clearBoard}>Clear</button>
       </div>
