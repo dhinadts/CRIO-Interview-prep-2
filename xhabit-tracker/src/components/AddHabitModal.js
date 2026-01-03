@@ -24,11 +24,14 @@ export default function AddHabitModal({ onClose, onSave }) {
   return (
     <div className="modal">
       <h3>What Did You Do Today?</h3>
-      <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+      <input type="date"
+        required
+        value={date} onChange={(e) => setDate(e.target.value)} />
       {Object.keys(habits).map((h) => (
         <label key={h}>
           <input
             type="checkbox"
+            required
             name={h}
             checked={habits[h]}
             onChange={(e) =>
@@ -39,9 +42,11 @@ export default function AddHabitModal({ onClose, onSave }) {
         </label>
       ))}
       <input
+        type="text"
         placeholder="Enter a short description"
         value={desc}
         onChange={(e) => setDesc(e.target.value)}
+        required
       />
       <button type="submit" onClick={submit}>Submit</button>
       <button onClick={onClose}>Cancel</button>
