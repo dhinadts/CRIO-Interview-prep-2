@@ -1,0 +1,7 @@
+
+body { background:#333; color:#fff; font-family:sans-serif; }
+.container { padding:20px; }
+.grid { display:flex; gap:20px; flex-wrap:wrap; }
+.card { background:#777; padding:20px; border-radius:8px; }
+.modal { background:#fff; color:#000; padding:20px; position:fixed; top:20%; left:35%; }
+@media(max-width:600px){ .grid{flex-direction:column;} .modal{left:5%;} }
