@@ -35,6 +35,7 @@ export default function App() {
       </div>
 
       <h2>Recent Habit Completions</h2>
+
       <HabitList
         habits={habits}
         onEdit={setEditHabit}
